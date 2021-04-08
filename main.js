@@ -1,27 +1,34 @@
-var images = ["img src= dadu.jpg",
-             "img src= thammu.jpg",
-             "img src=jethu.jpg",
-             "img src=DSC04870.JPG",
-             "img src=20210221_160510.jpg",
-             "img src=20210116_122053.jpg",
-             "img src=dada.jpg",
-             "img src=20210116_112217.jpg"
-            ];
+var images = [
+              "DSC04881.JPG",
+              "dadu.jpg", 
+              "thammu.jpg", 
+              "jethu.jpg",
+              "DSC04870.JPG",
+              "20210221_160510.jpg",
+              "20210116_122053.jpg",
+              "dada.jpg",
+              "DSC00429.JPG"];
 
-var names = ["Giridhari Lal De",
-             "Krishna De",
-             "Amit De",
-             "Madhumita De",
-             "Anjan De",
-             "Anasua De",
-             "Anshu De",
-             "Aniruddha De"
-            ];
-
-function change_name() {
-    images=images+1;
-    document.getElementById("image").innerHTML = images;
-
-    names=names+1;
-    document.getElementById("name").innerHTML = names;
-}
+            var names = ["Family Book",
+                         "Giridhari lal de",
+                          "Krishna De", 
+                          "Amit De", 
+                          "Madhumita De", 
+                          "Anjan De", 
+                          "Anasua De", 
+                          "Anshu De", 
+                          "Aniruddha De"];
+            var i = 0;
+            function update()
+            {
+                i++;
+                var numbers_of_family_member_in_array = 8
+                if(i > numbers_of_family_member_in_array )
+                {
+                    i = 0;
+                }
+                var updatedImage = images[i];
+                var updatedName  = names[i];
+                document.getElementById("family_member_image").src = updatedImage;
+                document.getElementById("family_member_name").innerHTML = updatedName;
+            }
